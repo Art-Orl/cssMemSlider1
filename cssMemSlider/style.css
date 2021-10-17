@@ -74,7 +74,7 @@ body {
 
 .navigation {
   display: flex;
-
+  order: 1;
   justify-content: space-between;
   /* position: absolute; */
   /* bottom: 20px;
@@ -86,12 +86,14 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 2px solid #eeeeee;
+  border: 2px solid rgb(106, 106, 165);
+
   background: rgb(106, 106, 165);
 }
 
 .dot:hover {
   background: #eee;
+  border: 2px solid #eee;
 }
 
 input[name='bin'] {
@@ -108,34 +110,57 @@ input[name='bi'] {
   flex-direction: column;
 }
 
-#bin1:checked ~ .s1 {
+#bin1:checked ~ .slides .s1 {
   margin-left: 0;
 }
-#bin2:checked ~ .s1 {
+#bin2:checked ~ .slides .s1 {
   margin-left: -25%;
 }
-#bin3:checked ~ .s1 {
+#bin3:checked ~ .slides .s1 {
   margin-left: -50%;
 }
-#bin4:checked ~ .s1 {
+#bin4:checked ~ .slides .s1 {
   margin-left: -75%;
 }
 
-#bin1:checked ~ .t1 {
+#bin1:checked ~ .fff .txt-container .t1 {
   margin-left: 0;
 }
-#bin2:checked ~ .t1 {
+#bin2:checked ~ .fff .txt-container .t1 {
   margin-left: -25%;
 }
-#bin3:checked ~ .t1 {
+#bin3:checked ~ .fff .txt-container .t1 {
   margin-left: -50%;
 }
-#bin4:checked ~ .t1 {
+#bin4:checked ~ .fff .txt-container .t1 {
   margin-left: -75%;
+}
+
+#bin1:checked ~ .fff .navigation #dot1 {
+  background: rgb(105, 67, 67);
+}
+
+#bin2:checked ~ .fff .navigation #dot2 {
+  background: rgb(105, 67, 67);
+}
+
+#bin3:checked ~ .fff .navigation #dot3 {
+  background: rgb(105, 67, 67);
+}
+
+#bin4:checked ~ .fff .navigation #dot4 {
+  background: rgb(105, 67, 67);
+}
+
+.fff {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (max-width: 320px) {
-  .textControls {
+  .fff {
     flex-direction: column;
     align-items: center;
   }
