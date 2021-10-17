@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -39,6 +43,8 @@ body {
 .textControls {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .txt-container {
@@ -49,18 +55,21 @@ body {
 .ts {
   width: 400%;
   display: flex;
+  /* align-items: flex-start; */
   overflow: hidden;
 }
 
 .t {
   width: 25%;
-  height: 100%;
+  display: flex;
+  /* align-items: flex-start; */
+  /* height: 100%; */
   transition: 0.5s;
 }
 
 .t p {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .navigation {
@@ -89,6 +98,15 @@ input[name='bin'] {
   display: none;
   /* visibility: hidden; */
 }
+input[name='bi'] {
+  display: none;
+  /* visibility: hidden; */
+}
+
+.textSlides {
+  display: flex;
+  flex-direction: column;
+}
 
 #bin1:checked ~ .s1 {
   margin-left: 0;
@@ -103,7 +121,7 @@ input[name='bin'] {
   margin-left: -75%;
 }
 
-/* #bin1:checked ~ .t1 {
+#bin1:checked ~ .t1 {
   margin-left: 0;
 }
 #bin2:checked ~ .t1 {
@@ -114,4 +132,27 @@ input[name='bin'] {
 }
 #bin4:checked ~ .t1 {
   margin-left: -75%;
-} */
+}
+
+@media (max-width: 320px) {
+  .textControls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .txt-container {
+    order: 2;
+    width: 100%;
+    justify-content: start;
+  }
+
+  .navigation {
+    width: 30%;
+    margin-bottom: 15px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
