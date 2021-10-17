@@ -1,3 +1,3 @@
 # cssMemSlilder
 
-https://Art-Orl.github.io/cssMemSlider/cssMemSlider/index.htmlder
+https://Art-Orl.github.io/cssMemSlider/cssMemSlider/index.html
