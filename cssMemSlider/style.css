@@ -77,18 +77,41 @@ body {
   order: 1;
   justify-content: space-between;
   width: 15%;
+  height: 100%;
 }
 
 .dot {
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+}
+
+.circle {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 2px solid rgb(106, 106, 165);
-  cursor: pointer;
   background: rgb(106, 106, 165);
+  border: 2px solid rgb(106, 106, 165);
 }
 
-.dot:hover {
+.circle:hover {
+  background: #eee;
+  border: 2px solid #eee;
+}
+
+#dot1:hover > .circle {
+  background: #eee;
+  border: 2px solid #eee;
+}
+#dot2:hover > .circle {
+  background: #eee;
+  border: 2px solid #eee;
+}
+#dot3:hover > .circle {
+  background: #eee;
+  border: 2px solid #eee;
+}
+#dot4:hover > .circle {
   background: #eee;
   border: 2px solid #eee;
 }
@@ -131,19 +154,19 @@ input[name='bi'] {
   margin-left: -75%;
 }
 
-#bin1:checked ~ .fff .navigation #dot1 {
+#bin1:checked ~ .fff .navigation .circle1 {
   background: rgb(105, 67, 67);
 }
 
-#bin2:checked ~ .fff .navigation #dot2 {
+#bin2:checked ~ .fff .navigation .circle2 {
   background: rgb(105, 67, 67);
 }
 
-#bin3:checked ~ .fff .navigation #dot3 {
+#bin3:checked ~ .fff .navigation .circle3 {
   background: rgb(105, 67, 67);
 }
 
-#bin4:checked ~ .fff .navigation #dot4 {
+#bin4:checked ~ .fff .navigation .circle4 {
   background: rgb(105, 67, 67);
 }
 
@@ -175,6 +198,10 @@ input[name='bi'] {
   }
 
   .dot {
+    padding: 5px;
+  }
+
+  .circle {
     width: 10px;
     height: 10px;
   }
@@ -185,7 +212,7 @@ input[name='bi'] {
   }
 }
 
-@media (max-height: 800px) {
+/* @media (max-height: 800px) {
   .slider {
     width: 50%;
     height: 70vh;
@@ -197,6 +224,6 @@ input[name='bi'] {
   }
 
   .navigation {
-    width: 20%;
+    width: 25%;
   }
-}
+} */
